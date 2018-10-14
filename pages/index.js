@@ -19,6 +19,8 @@ const Broken = connect()(withRouter(props => r.div([
 
 console.log(Broken.contextTypes);
 
-export default withRouter(() => r(Provider, { store: createStore(x => x) }, r.div([
+const store = createStore(x => x);
+
+export default withRouter(() => r(Provider, { store }, r.div([
     r(Broken),
 ])));
