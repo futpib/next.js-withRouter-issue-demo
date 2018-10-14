@@ -17,6 +17,8 @@ const Broken = connect()(withRouter(props => r.div([
     r.pre(JSON.stringify(props.router.query, null, 2))
 ])));
 
+console.log(Broken.contextTypes);
+
 export default withRouter(() => r(Provider, { store: createStore(x => x) }, r.div([
     r(Broken),
 ])));
